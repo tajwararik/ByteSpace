@@ -1,15 +1,38 @@
 import Header from "./components/Header";
-import { poppins, satoshi } from "./layout";
+import { poppins } from "./layout";
 import Image from "next/image";
+
+const shapes = [
+  { src: "/shapes/squiggle-lime.png", cls: "-left-[1%] top-[18%] w-[14%]" },
+  { src: "/shapes/squiggle-white-sm.png", cls: "left-[20%] top-[45%] w-[8%]" },
+  { src: "/shapes/ring.png", cls: "left-[20%] bottom-[6%] w-[16%]" },
+  { src: "/shapes/Cone.png", cls: "-right-[1%] top-[20%] w-[12%]" },
+  { src: "/shapes/triangle-white.png", cls: "right-[15%] top-[42%] w-[9%]" },
+  {
+    src: "/shapes/squiggle-white-lg.png",
+    cls: "right-[19%] top-[65%] w-[13%]",
+  },
+];
 
 export default function Hero() {
   return (
-    <section className="relative isolate w-screen min-h-175 blue-grid text-center text-white">
+    <section className="relative isolate min-h-175 w-full overflow-hidden blue-grid text-center text-white">
+      {shapes.map(({ src, cls }) => (
+        <Image
+          key={src}
+          src={src}
+          alt=""
+          width={400}
+          height={400}
+          className={`pointer-events-none absolute z-5 hidden h-auto select-none lg:block ${cls}`}
+        />
+      ))}
+
       <div className="relative z-10">
         <Header />
 
         <div className="mt-8">
-          <h1 className={`${poppins.className} text-5xl my-4`}>
+          <h1 className={`${poppins.className} my-4 text-5xl`}>
             Get Access to Hundreds
             <br />
             Courses Available
@@ -31,10 +54,10 @@ export default function Hero() {
             />
             <input
               placeholder="Course, topic, creator"
-              className="h-11 w-full rounded-3xl border border-gray-300 bg-white pl-11 outline-none placeholder:text-gray-500 text-neutral-500"
+              className="h-11 w-full rounded-3xl border border-gray-300 bg-white pl-11 text-neutral-500 outline-none placeholder:text-gray-500"
             />
           </div>
-          <button className="inline-flex h-10 items-center justify-center rounded-3xl bg-(--lime) px-6 text-(--ink) align-middle font-medium">
+          <button className="inline-flex h-10 items-center justify-center rounded-3xl bg-(--lime) px-6 align-middle font-medium text-(--ink) cursor-pointer">
             Search
           </button>
         </div>
@@ -44,13 +67,15 @@ export default function Hero() {
         <Image
           src="/Ellipse.svg"
           alt=""
+          aria-hidden
           width={1149}
           height={442}
           className="absolute inset-0 h-full w-full"
         />
         <Image
           src="/boy.svg"
-          alt=""
+          loading="eager"
+          alt="Boy image"
           width={722}
           height={515}
           className="absolute bottom-0 left-1/2 z-10 h-auto w-[min(520px,65%)] -translate-x-1/2"
