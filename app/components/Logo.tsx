@@ -4,10 +4,10 @@ export function Logo() {
   return (
     <Link
       href="/"
-      className="inline-flex items-center gap-1.5 font-black tracking-[-0.03em]"
+      className="inline-flex items-end gap-1.5 font-black tracking-tight"
     >
       <img src="/logo.svg" alt="Logo" />
-      <span className="translate-y-1">ByteSpace</span>
+      <span>ByteSpace</span>
     </Link>
   );
 }
