@@ -3,6 +3,7 @@ import LogoStrip from "./components/LogoStrip";
 import Categories from "./components/Categories";
 import Courses from "./components/Courses";
 import Paths from "./components/Paths";
+import Growth from "./components/Growth";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Categories />
       <Courses />
       <Paths />
+      <Growth />
     </main>
   );
 }
