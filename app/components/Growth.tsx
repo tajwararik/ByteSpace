@@ -7,6 +7,13 @@ const stats = [
   { value: "16", label: "Creators" },
 ];
 
+const perks = [
+  "Share Your Expertise",
+  "Monetize Your Passion",
+  "Flexibility and Autonomy",
+  "Build a Community",
+];
+
 function Check() {
   return (
     <svg width="22" height="22" viewBox="0 0 22 22" className="shrink-0">
@@ -63,6 +70,41 @@ export default function Growth() {
             height={697}
             className="h-auto w-full lg:w-[124%] lg:max-w-none"
           />
+        </div>
+
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <Image
+            src="/posters/poster-two.png"
+            alt="A smiling course creator with headphones and a tablet, next to revenue cards and a happy students card"
+            width={587}
+            height={719}
+            className="h-auto w-full max-w-146.75"
+          />
+
+          <div>
+            <h2
+              className={`${poppins.className} text-4xl leading-[1.2] text-(--ink) lg:text-[44px]`}
+            >
+              Create &amp; Manage Courses Easily.
+            </h2>
+            <p className="mt-10 max-w-140 text-[17px] leading-7 text-neutral-600">
+              <strong className="font-semibold text-(--ink)">ByteSpace</strong>{" "}
+              supports individuals or entities in the creation, publication, and
+              administration of educational courses.
+            </p>
+
+            <ul className="mt-10 space-y-4">
+              {perks.map((perk) => (
+                <li
+                  key={perk}
+                  className="flex items-center gap-3 text-lg text-neutral-800"
+                >
+                  <Check />
+                  {perk}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
