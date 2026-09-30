@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #003be2;
+  --lime: #cbfc01;
+  --ink: #17191f;
+}
+
+.blue-grid {
+  background-color: var(--blue);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.11) 1px, transparent 1px);
+  background-size: 84px 84px;
+}
