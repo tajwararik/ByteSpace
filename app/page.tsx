@@ -4,6 +4,7 @@ import Categories from "./components/Categories";
 import Courses from "./components/Courses";
 import Paths from "./components/Paths";
 import Growth from "./components/Growth";
+import Join from "./components/Join";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Courses />
       <Paths />
       <Growth />
+      <Join />
     </main>
   );
 }
