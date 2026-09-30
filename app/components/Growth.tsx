@@ -66,6 +66,7 @@ export default function Growth() {
           <Image
             src="/posters/poster-one.png"
             alt="A smiling student with headphones and a laptop, next to a course card and a 55% learning progress card"
+            loading="eager"
             width={703}
             height={697}
             className="h-auto w-full lg:w-[124%] lg:max-w-none"
@@ -76,6 +77,7 @@ export default function Growth() {
           <Image
             src="/posters/poster-two.png"
             alt="A smiling course creator with headphones and a tablet, next to revenue cards and a happy students card"
+            loading="eager"
             width={587}
             height={719}
             className="h-auto w-full max-w-146.75"
