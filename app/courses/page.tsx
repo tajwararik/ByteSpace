@@ -2,6 +2,121 @@ import Image from "next/image";
 import { poppins } from "../layout";
 import Header from "../components/Header";
 import CourseToolbar from "../components/CourseToolbar";
+import CategoryTabs from "../components/CategoryTabs";
+import CourseCard, { type Course } from "../components/CourseCard";
+
+const author = "purepearl studio";
+
+const courses: Course[] = [
+  {
+    id: 1,
+    title: "Learn Figma from Basic",
+    thumb: "/courses/image-one.png",
+    author,
+  },
+  {
+    id: 2,
+    title: "Build Digital Asset",
+    thumb: "/courses/image-two.png",
+    author,
+  },
+  {
+    id: 3,
+    title: "The Power of Big Data",
+    thumb: "/courses/image-three.png",
+    author,
+  },
+  {
+    id: 4,
+    title: "Balancing Productivity and Life",
+    thumb: "/courses/image-four.png",
+    author,
+  },
+  {
+    id: 5,
+    title: "Mastering Money Management",
+    thumb: "/courses/image-five.png",
+    author,
+  },
+  {
+    id: 6,
+    title: "From Idea to Startup Success",
+    thumb: "/courses/image-six.png",
+    author,
+  },
+  {
+    id: 7,
+    title: "Learn Figma from Basic",
+    thumb: "/courses/image-one.png",
+    author,
+  },
+  {
+    id: 8,
+    title: "Build Digital Asset",
+    thumb: "/courses/image-two.png",
+    author,
+  },
+  {
+    id: 9,
+    title: "The Power of Big Data",
+    thumb: "/courses/image-three.png",
+    author,
+  },
+  {
+    id: 10,
+    title: "Balancing Productivity and Life",
+    thumb: "/courses/image-four.png",
+    author,
+  },
+  {
+    id: 11,
+    title: "Mastering Money Management",
+    thumb: "/courses/image-five.png",
+    author,
+  },
+  {
+    id: 12,
+    title: "From Idea to Startup Success",
+    thumb: "/courses/image-six.png",
+    author,
+  },
+  {
+    id: 13,
+    title: "Learn Figma from Basic",
+    thumb: "/courses/image-one.png",
+    author,
+  },
+  {
+    id: 14,
+    title: "Build Digital Asset",
+    thumb: "/courses/image-two.png",
+    author,
+  },
+  {
+    id: 15,
+    title: "The Power of Big Data",
+    thumb: "/courses/image-three.png",
+    author,
+  },
+  {
+    id: 16,
+    title: "Balancing Productivity and Life",
+    thumb: "/courses/image-four.png",
+    author,
+  },
+  {
+    id: 17,
+    title: "Mastering Money Management",
+    thumb: "/courses/image-five.png",
+    author,
+  },
+  {
+    id: 18,
+    title: "From Idea to Startup Success",
+    thumb: "/courses/image-six.png",
+    author,
+  },
+];
 
 export default function CoursesPage() {
   return (
@@ -43,6 +158,15 @@ export default function CoursesPage() {
       </section>
 
       <CourseToolbar />
+      <CategoryTabs />
+
+      <section className="bg-white px-6 pt-10 pb-20">
+        <div className="mx-auto grid max-w-300 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {courses.map((c) => (
+            <CourseCard key={c.id} {...c} eager />
+          ))}
+        </div>
+      </section>
     </>
   );
 }
