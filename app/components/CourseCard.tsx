@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export type Course = {
+  id?: number;
   title: string;
   thumb: string;
   author: string;
