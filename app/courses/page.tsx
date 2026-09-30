@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import CourseToolbar from "../components/CourseToolbar";
 import CategoryTabs from "../components/CategoryTabs";
 import CourseCard, { type Course } from "../components/CourseCard";
+import Footer from "../components/Footer";
 
 const author = "purepearl studio";
 
@@ -160,13 +161,38 @@ export default function CoursesPage() {
       <CourseToolbar />
       <CategoryTabs />
 
-      <section className="bg-white px-6 pt-10 pb-20">
+      <section className="bg-white px-6 py-10">
         <div className="mx-auto grid max-w-300 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {courses.map((c) => (
             <CourseCard key={c.id} {...c} eager />
           ))}
         </div>
       </section>
+
+      <section className="bg-white">
+        <div className="mx-auto flex max-w-300 items-center justify-center gap-3 px-6 pt-12 pb-18">
+          <Image
+            src="/previous.svg"
+            alt="Previous page"
+            width={56}
+            height={48}
+          />
+
+          <ul className="flex items-center text-base font-semibold text-(--ink)">
+            <li className="flex size-9 items-center justify-center text-neutral-300">
+              1
+            </li>
+            <li className="flex size-9 items-center justify-center">2</li>
+            <li className="flex size-9 items-center justify-center">3</li>
+            <li className="flex size-9 items-center justify-center">4</li>
+            <li className="flex size-9 items-center justify-center">5</li>
+          </ul>
+
+          <Image src="/next.svg" alt="Next page" width={56} height={48} />
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 }
