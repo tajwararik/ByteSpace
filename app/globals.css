@@ -17,3 +17,33 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.11) 1px, transparent 1px);
   background-size: 84px 84px;
 }
+
+.soft-gradient {
+  background:
+    radial-gradient(
+      520px 400px at 23% 3%,
+      rgba(214, 246, 80, 0.45),
+      transparent 70%
+    ),
+    radial-gradient(
+      440px 440px at 0% 49%,
+      rgba(190, 205, 245, 0.7),
+      transparent 70%
+    ),
+    radial-gradient(
+      420px 420px at 100% 6%,
+      rgba(200, 212, 245, 0.55),
+      transparent 70%
+    ),
+    radial-gradient(
+      560px 560px at 92% 91%,
+      rgba(180, 197, 242, 0.8),
+      transparent 70%
+    ),
+    radial-gradient(
+      400px 400px at 3% 86%,
+      rgba(215, 250, 70, 0.6),
+      transparent 70%
+    ),
+    #fafafa;
+}
