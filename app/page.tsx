@@ -5,12 +5,36 @@ import Image from "next/image";
 const shapes = [
   { src: "/shapes/squiggle-lime.png", cls: "-left-[1%] top-[18%] w-[14%]" },
   { src: "/shapes/squiggle-white-sm.png", cls: "left-[20%] top-[45%] w-[8%]" },
-  { src: "/shapes/ring.png", cls: "left-[20%] bottom-[6%] w-[16%]" },
+  { src: "/shapes/ring.png", cls: "left-[18%] bottom-[2%] w-[16%]" },
   { src: "/shapes/Cone.png", cls: "-right-[1%] top-[20%] w-[12%]" },
   { src: "/shapes/triangle-white.png", cls: "right-[15%] top-[42%] w-[9%]" },
   {
     src: "/shapes/squiggle-white-lg.png",
     cls: "right-[19%] top-[65%] w-[13%]",
+  },
+];
+
+const cards = [
+  {
+    src: "/cards/card-one.png",
+    alt: "UI/UX Design: 200 courses, 1000+ students",
+    w: 208,
+    h: 70,
+    cls: "left-[18%] top-[5%] w-[18%]",
+  },
+  {
+    src: "/cards/card-two.png",
+    alt: "Happy students: 4.5 rating, 240 reviews",
+    w: 232,
+    h: 131,
+    cls: "left-[56%] top-[10%] w-[22.5%]",
+  },
+  {
+    src: "/cards/card-three.png",
+    alt: "Learning progress: 55%",
+    w: 258,
+    h: 121,
+    cls: "left-[15%] top-[58%] w-[20%]",
   },
 ];
 
@@ -80,6 +104,17 @@ export default function Hero() {
           height={515}
           className="absolute bottom-0 left-1/2 z-10 h-auto w-[min(520px,65%)] -translate-x-1/2"
         />
+
+        {cards.map(({ src, alt, w, h, cls }) => (
+          <Image
+            key={src}
+            src={src}
+            alt={alt}
+            width={w}
+            height={h}
+            className={`absolute z-20 hidden h-auto drop-shadow-xl md:block ${cls}`}
+          />
+        ))}
       </div>
     </section>
   );
