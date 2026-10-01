@@ -1,12 +1,13 @@
 import Link from "next/link";
+import { tabs, type TabKey } from "../data";
 
-const tabs = [
-  { key: "about", label: "About" },
-  { key: "lessons", label: "Lesson" },
-  { key: "reviews", label: "Reviews" },
-];
+// const tabs = [
+//   { key: "about", label: "About" },
+//   { key: "lessons", label: "Lesson" },
+//   { key: "reviews", label: "Reviews" },
+// ];
 
-type TabKey = (typeof tabs)[number]["key"];
+// type TabKey = (typeof tabs)[number]["key"];
 
 export default function CourseTabs({ active }: { active: TabKey }) {
   return (
