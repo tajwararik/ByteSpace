@@ -58,7 +58,7 @@ export default function Join() {
         </p>
         <Link
           className="inline-flex h-10 items-center justify-center rounded-3xl bg-(--lime) px-6 align-middle font-medium text-(--ink) cursor-pointer"
-          href="/signup"
+          href="/sign-up"
         >
           Join as Creator
         </Link>
