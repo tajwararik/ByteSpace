@@ -15,7 +15,7 @@ export default function Header() {
       <div className="flex items-center gap-8">
         <Link href="/login">Sign In</Link>
         <Link href="/signup">Join Us</Link>
-        <Link href="#">
+        <Link href="/course-details">
           <img src="/cart.svg" alt="Cart" />
         </Link>
       </div>
