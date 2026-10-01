@@ -1,8 +1,13 @@
 import Image from "next/image";
 import { poppins } from "../../layout";
-import { course } from "../data";
 import Header from "../../components/Header";
 import CourseSidebar from "./CourseSidebar";
+
+const stats = [
+  { icon: "/course/network.svg", label: "Intermediate" },
+  { icon: "/course/star-blue.svg", label: "4.8 (172 reviews)" },
+  { icon: "/course/contact.svg", label: "199 Students" },
+];
 
 export default function CourseHero() {
   return (
@@ -27,7 +32,7 @@ export default function CourseHero() {
             </p>
 
             <ul className="mt-6 flex flex-wrap gap-4">
-              {course.stats.map(({ icon, label }) => (
+              {stats.map(({ icon, label }) => (
                 <li
                   key={label}
                   className="inline-flex h-10 items-center gap-2 rounded-full bg-white px-5 text-base text-(--ink)"
