@@ -13,7 +13,7 @@ export default function Header() {
       </nav>
 
       <div className="flex items-center gap-8">
-        <Link href="/login">Sign In</Link>
+        <Link href="/log-in">Sign In</Link>
         <Link href="/sign-up">Join Us</Link>
         <Link href="/course-details">
           <img src="/cart.svg" alt="Cart" />
