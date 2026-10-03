@@ -1,4 +1,5 @@
 import CourseHero from "./_components/CourseHero";
+import Footer from "../components/Footer";
 import CourseTabs from "./_components/CourseTabs";
 import AboutTab from "./_components/AboutTab";
 import LessonsTab from "./_components/LessonsTab";
@@ -28,6 +29,8 @@ export default async function CoursePage({
           </div>
         </div>
       </section>
+
+      <Footer />
     </>
   );
 }
